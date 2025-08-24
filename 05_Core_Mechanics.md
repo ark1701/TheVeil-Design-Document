@@ -77,7 +77,7 @@ Puritans can make 2 Starship Factories per Star System
 
 Ionians can make 1 Starship Factory per Star System, but begin as a Class 4 Factory and can build a Colony Ship in any Star System they control
 
-
+-------------------------------------------------------
 
 STARSHIPS
 
