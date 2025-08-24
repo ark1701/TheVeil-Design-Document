@@ -2,7 +2,7 @@
 ## A Mixed Reality Strategy Boardgame of Galactic Conquest
 
 ### Design & Lore Bible
-**Version:** 1.0
+**Version:** 1.012
 **Author:** Arlen Roy Kundert
 **Date of Creation:**  2025-08-22
 **Copyright Notice:** © 2025 Arlen Roy Kundert. All rights reserved.
@@ -26,4 +26,4 @@ arkofthekundert@gmail.com
 
 ### **VERSION HISTORY**
 
-*   **v1.0 (2025-08-22):** Initial commit. Includes Lore Overview, Faction Definitions, Victory Conditions, Veil Card mechanics, and core game concepts.
+*   **v1.012 (2025-08-24):** Initial commit. Includes Lore Overview, Faction Definitions, Victory Conditions, Veil Card mechanics, and core game concepts.
