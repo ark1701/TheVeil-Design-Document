@@ -32,3 +32,6 @@ The November 4 import review recorded a v4 test ship with six passing asset chec
 2. Stage only redistributable project inputs. Keep caches, user settings, raw logs, signing material and generated builds local. Preserve existing Unity asset paths and GUIDs in the first import.
 3. From a clean checkout, open in the recorded editor and rebuild the test ship. Compare the target count, manually edited Wing_P box and part IDs before and after. Record errors verbatim with local paths and identifiers removed where appropriate.
 4. Build the same scene for Quest 3. Record build result separately from device launch, hand selection, visible tablet response and measured frame timing. Attach the observations to the issue.
+
+## Saved collider baseline — November 5, 2026
+Direct inspection of the uploaded PipelineTestShip.prefab and PipelineTestShip_Display.prefab found the same Wing_P Box Collider size in both: X = 0.43321174, Y = 0.3, Z = 0.14712915. Arlen confirmed that Y = 0.3 was his deliberate enlargement. This establishes the saved baseline for future rebuild comparisons. A fresh rebuild-preservation test remains pending.
