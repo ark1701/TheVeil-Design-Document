@@ -1,6 +1,14 @@
 # Engineering handoff
 
 **Unity editor baseline:** `6000.6.4f1` (revision `12bfff696524`), reported from the working project's `ProjectSettings/ProjectVersion.txt`. Use this exact editor for the first clean-checkout test.
+## Located test prefabs
+Arlen verified both paths in the separate **Ship Asset demos** project. Paths are relative to that project's root.
+
+- `Assets/_ShipPipelineTest/Pipeline Test Ship/Prefabs/PipelineTestShip.prefab`
+- `Assets/_ShipPipelineTest/Pipeline Test Ship/Prefabs/PipelineTestShip_Display.prefab`
+
+The filename inventory confirms their location. Verification of the saved Wing_P collider edit is a separate check. The editor revision above was read from The Veil game project.
+
 ## Project map
 | Material | Intended home | Rule |
 |---|---|---|
