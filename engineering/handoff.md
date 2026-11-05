@@ -54,4 +54,17 @@ Inspected Arlen's uploaded Packages/manifest.json and Packages/packages-lock.jso
 
 The manifest requests Rider integration 3.0.38 while the lockfile resolves 3.0.40. The development feature package also requests 3.0.40. Record this during clean-checkout validation. The manifest includes AI Assistant 2.21.0-pre.2 and com.unity.pipeline 0.9.1-exp.1. These are distinct from the custom ShipPipeline assets. Package names alone do not establish whether a feature is enabled in the project.
 
-Next inventory input: Packages/manifest.json and Packages/packages-lock.json from the separate Ship Asset demos project, to compare dependencies before consolidating the projects.
+The demo package comparison is recorded below.
+
+## Demo-to-main package comparison — November 5, 2026
+Compared the uploaded Ship Asset demos manifest(1).json and packages-lock(1).json with The Veil's manifest.json and packages-lock.json. All shared XR, Input System and render-pipeline package records match. All dependency references in the demo lockfile have entries.
+
+| Package | The Veil | Ship Asset demos |
+|---|---|---|
+| com.unity.collab-proxy | 2.14.0 | Absent |
+| com.unity.sdk.linux-arm64 | 1.1.0 | 1.1.1 |
+| com.unity.sdk.linux-x86_64 | 1.1.0 | 1.1.1 |
+| com.unity.toolchain.linux-x86_64-linux | 1.1.0 | 1.1.1 |
+| com.unity.sysroot.base (transitive) | 1.1.0 | 1.1.1 |
+
+These are the complete lockfile record differences. The matching XR and rendering versions reduce one source of migration uncertainty. Scene setup, project settings, custom scripts and asset references still require an audit and an actual import test. Next collect the main project's Assets folder structure to identify existing content before choosing import destinations.
