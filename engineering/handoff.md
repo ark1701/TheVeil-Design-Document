@@ -1,4 +1,6 @@
 # Engineering handoff
+
+**Unity editor baseline:** `6000.6.4f1` (revision `12bfff696524`), reported from the working project's `ProjectSettings/ProjectVersion.txt`. Use this exact editor for the first clean-checkout test.
 ## Project map
 | Material | Intended home | Rule |
 |---|---|---|
