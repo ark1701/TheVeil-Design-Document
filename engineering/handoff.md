@@ -35,3 +35,23 @@ The November 4 import review recorded a v4 test ship with six passing asset chec
 
 ## Saved collider baseline — November 5, 2026
 Direct inspection of the uploaded PipelineTestShip.prefab and PipelineTestShip_Display.prefab found the same Wing_P Box Collider size in both: X = 0.43321174, Y = 0.3, Z = 0.14712915. Arlen confirmed that Y = 0.3 was his deliberate enlargement. This establishes the saved baseline for future rebuild comparisons. A fresh rebuild-preservation test remains pending.
+
+## Main project package inventory — November 5, 2026
+Inspected Arlen's uploaded Packages/manifest.json and Packages/packages-lock.json from The Veil project. All direct dependency names and every dependency referenced by the lockfile have entries in the lockfile. This is a static file check. Editor compilation, enabled XR features and headset behavior still require verification.
+
+| Package | Locked version |
+|---|---|
+| Universal Render Pipeline | 17.6.0 |
+| Input System | 1.20.0 |
+| OpenXR | 1.18.0 |
+| XR Management | 4.7.0 |
+| XR Interaction Toolkit | 3.6.1 |
+| XR Hands | 1.9.0 |
+| Meta OpenXR | 2.6.1 |
+| AR Foundation | 6.6.2 |
+| XR Composition Layers | 2.6.0 |
+| Android XR OpenXR | 1.4.0 |
+
+The manifest requests Rider integration 3.0.38 while the lockfile resolves 3.0.40. The development feature package also requests 3.0.40. Record this during clean-checkout validation. The manifest includes AI Assistant 2.21.0-pre.2 and com.unity.pipeline 0.9.1-exp.1. These are distinct from the custom ShipPipeline assets. Package names alone do not establish whether a feature is enabled in the project.
+
+Next inventory input: Packages/manifest.json and Packages/packages-lock.json from the separate Ship Asset demos project, to compare dependencies before consolidating the projects.
