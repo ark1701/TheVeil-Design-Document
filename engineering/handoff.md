@@ -68,3 +68,12 @@ Compared the uploaded Ship Asset demos manifest(1).json and packages-lock(1).jso
 | com.unity.sysroot.base (transitive) | 1.1.0 | 1.1.1 |
 
 These are the complete lockfile record differences. The matching XR and rendering versions reduce one source of migration uncertainty. Scene setup, project settings, custom scripts and asset references still require an audit and an actual import test. Next collect the main project's Assets folder structure to identify existing content before choosing import destinations.
+
+## Legacy Puritan setup audit — November 5, 2026
+Arlen's main-project file inventory shows the Puritan FBX, five textures, editor setup and five runtime scripts under Assets/The Veil assets/Puritan. The queried The Veil and Scenes directories returned no non-meta files. No generated Puritan materials or prefab appeared in that inventory.
+
+Inspected the supplied README and PuritanSetup.cs. ResolvePaths searches for Models/PuritanBattleCruiser.fbx and chooses the first matching imported model. Build creates Materials and Prefabs next to that model. FirstTimeSetup retries unavailable inputs up to 20 times and then exits silently. It also exits if either the prefab or hull material already exists. These are possible failure paths, not a diagnosis of this project's missing outputs. Obtain the current Unity Console evidence next.
+
+Rebuild creates a new prefab instance from the FBX and writes it over the output prefab, with no capture/restore of manual prefab edits. Material settings are also reapplied. Preserve existing outputs before using this legacy rebuild command. This builder adds a root collider and turret/engine animation components, but contains no subsystem target IDs, damage-state setup or LODGroup creation. Treat subsystem/LOD migration as explicit work.
+
+The supplied setup uses Puritan.EditorTools. The test package uses PipelineTest.EditorTools and ShipPipeline.PipelineTestShip for editor code, and PipelineTest for its demo runtime classes. The Puritan README describes runtime namespace Puritan, but those five actual runtime sources still need verification. Similar filenames alone do not prove a duplicate-type conflict.
